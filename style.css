@@ -1,0 +1,1297 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,700|Orbitron:900');
+
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  box-sizing: border-box;
+}
+
+
+/* CSS MAIN */
+
+
+.one {
+  background:
+    -webkit-linear-gradient(315deg, hsla(346.26, 95.77%, 44.95%, 1) 0%, hsla(346.26, 95.77%, 44.95%, 0) 70%),
+    -webkit-linear-gradient(65deg, hsla(31.68, 97.5%, 44.94%, 1) 10%, hsla(31.68, 97.5%, 44.94%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(297.05, 97.55%, 40.06%, 1) 15%, hsla(297.05, 97.55%, 40.06%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(220.24, 92.41%, 47.67%, 1) 100%, hsla(220.24, 92.41%, 47.67%, 0) 70%);
+  background:
+    linear-gradient(135deg, hsla(346.26, 95.77%, 44.95%, 1) 0%, hsla(346.26, 95.77%, 44.95%, 0) 70%),
+    linear-gradient(25deg, hsla(31.68, 97.5%, 44.94%, 1) 10%, hsla(31.68, 97.5%, 44.94%, 0) 80%),
+    linear-gradient(315deg, hsla(297.05, 97.55%, 40.06%, 1) 15%, hsla(297.05, 97.55%, 40.06%, 0) 80%),
+    linear-gradient(245deg, hsla(220.24, 92.41%, 47.67%, 1) 100%, hsla(220.24, 92.41%, 47.67%, 0) 70%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.phone {
+  width: 20vw;
+  min-width: 300px;
+  height: 80vh;
+  min-height: 600px;
+  background: white;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  align-self: center;
+  margin: 0 auto;
+  border: 2px solid silver;
+  border-radius: 5%;
+  box-shadow: 5px 10px 8px black;
+}
+
+.screen {
+  width: 18vw;
+  min-width: 276px;
+  height: 72vh;
+  min-height: 543px;
+  background: black;
+  position: relative;
+  top: 30px;
+  left: 0px;
+  align-self: center;
+  margin: 0 auto;
+  transition: .8s
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/*Top screen section (collapser) */
+
+
+
+
+.expand-main {
+  height: 2.5vh;
+  width: 100%;
+  background: rgba(155, 193, 255, 0.3);
+  position: absolute;
+  top: 0px;
+  transition-duration: .3s;
+  transition-property: height;
+  transition-timing-function: ease-out;
+  z-index: 10;
+}
+
+.expand-main:hover{
+  background-color: #9bc1ff;
+  height: 543px;
+}
+
+#battery {
+  width: 10%;
+  position: absolute;
+  top: -5px;
+  left: 205px;
+}
+
+#signal {
+  width: 7%;
+  position: absolute;
+  top: -1px;
+  left: 175px;
+}
+
+.time-top {
+  position: absolute;
+  left: 237px;
+  font-family: Asap;
+  color: #2d5bb9;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Slider to unlock the screen */
+
+
+
+
+.slider-screen {
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  z-index: 15;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 70px;
+  background: #00ff7f;
+  opacity: 1;
+  cursor: pointer;
+  border: 3px solid #7fffbf;
+  border-radius: 10%;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+#slider-text {
+  color: #42f4a1;
+  position: absolute;
+  top: 380px;
+  left: 50px;
+  font-family: Orbitron, sans-serif;
+  font-size: 1em;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Home screen section */
+
+
+
+
+.home-screen {
+  width: 100%;
+  height: 100%;
+  background: url(img/13.jpg);
+  background-size: 276px 543px;
+  position: absolute;
+  display: none;
+}
+
+.time {
+  width: 100%;
+  height: 70px;
+  color: #63e2ff;
+  background: #333333;
+  padding-top: 6px;
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  font-weight: bold;
+  font-family: Orbitron;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.wrapper {
+  color: white;
+  position: relative;
+  top: 420px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+#settings {
+  background: #2184d1;
+  padding: 37.7%;
+  transition: .2s;
+}
+
+#settings:hover {
+  background-color: #34e3ed;
+  cursor: pointer;
+  transition: .5s
+}
+
+#app-screen {
+  background: #d1213e;
+  padding: 37.7%;
+  transition: .2s;
+}
+
+#app-screen:hover {
+  background: #ff008c;
+  cursor: pointer;
+  transition: .5s;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* App screen section */
+
+
+
+
+.app-Mscreen {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: black;
+  position: absolute;
+  left: .5px;
+  display: none;
+}
+
+.wrapper-apps {
+  width: 100%;
+  height: 88%;
+  background: white;
+  position: absolute;
+  top: 19px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  border-bottom: 1.5px solid red;
+}
+
+.app-grid {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+#first-app {
+  background: #e61919;
+  padding: 2.5rem;
+  grid-column: 1 / -2;
+}
+
+#second-app {
+  background: #00e600;
+  padding: 2rem;
+}
+
+#third-app {
+  background: #0080ff;
+  padding: 2rem;
+}
+
+#fourth-app {
+  background: #ff8000;
+  padding: 2rem;
+}
+
+#fifth-app {
+  background: #009999;
+  padding: 2.5rem;
+}
+
+#sixth-app {
+  background: #8000ff;
+  padding: 2rem;
+}
+
+#seventh-app {
+  background: #cc3300;
+  padding: 2.5rem;
+}
+
+#eighth-app {
+  background: #e600ac;
+  padding: 2rem;
+}
+
+.app-grid:hover {
+  filter: brightness(125%);
+  cursor: pointer;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Tools section */
+
+
+
+.tools {
+  background: #dbdbdb;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.tool-items {
+  background: white;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  height: 88%;
+  padding-top: 30px;
+  display: grid;
+  grid-template: repeat(3, 1fr);
+  justify-items: center;
+  grid-gap: 20px;
+}
+
+.tool-grid img:hover {
+  cursor: pointer;
+  filter: brightness(125%); 
+}
+
+#currBtn {
+  width: 40%;
+}
+
+
+/*--------------------------------------*/
+/* Reverse text */
+
+
+.reverse {
+  background: red;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  height: 88%;
+  display: none;
+}
+
+.reverse-tool {
+  padding-top: 150px;
+  display: grid;
+  grid-template: repeat(2, 1fr);
+  justify-items: center;
+  grid-gap: 1px;
+}
+
+.revString input[type=text] {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: black;
+  outline: none;
+  font-family: : Asap, sans-serif;
+  font-size: 2em;
+  text-align: center;
+  border: 0;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+
+
+/*--------------------------------------*/
+/* Temperature converter */
+
+
+.temperature {
+  background: white;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  height: 88%;
+  display: none;
+}
+
+.temp-converter {
+  padding-top: 30px;
+  display: grid;
+  grid-template: repeat(3, 1fr);
+  justify-items: center;
+  grid-gap: 20px;
+}
+
+.temp-grid input[type=number] {
+  width: 200px;
+  height: 100px;
+  color: gold;
+  background: #161616;
+  font-family: : Asap, sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  outline: none;
+  border: 2px solid red;
+}
+
+
+/*--------------------------------------*/
+/* Currency converter */
+
+
+.currency {
+  background: white;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  height: 88%;
+  display: none;
+}
+
+.currency-converter {
+  padding-top: 10px;
+  display: grid;
+  grid-template: repeat(5, 1fr);
+  justify-items: center;
+  grid-gap: 10px;
+}
+
+.curr-grid {
+  height: 80px;
+  position: relative;
+  left: 5px;
+}
+
+.curr-grid img {
+  padding-right: 10px;
+}
+
+.curr-grid input[type=number] {
+  width: 200px;
+  height: 100px;
+  color: red;
+  background: #ccdfff;
+  font-family: : Asap, sans-serif;
+  text-align: center;
+  font-size: .9rem;
+  outline: none;
+  border: 2px solid #8c0101;
+}
+
+.backBtn-tools {
+  width: 1em;
+  color: red;
+  position: absolute;
+  top: 500px;
+  left: 125px;
+  font-size: 2em;
+  display: none;
+}
+
+.backBtn-tools:hover {
+  cursor: pointer;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Blackjack app section */
+
+
+
+
+.blackjack-app {
+  width: 100%;
+  height: 100%;
+  background: #3f0a0a;
+  display: none;
+}
+
+.result {
+  color: white;
+  background: purple;
+  position: absolute;
+  top: 20px;
+  font-family: Asap, sans-serif;
+  
+}
+
+.resultQ {
+  color: black;
+  background-color: yellow;
+  position: absolute;
+  top: 20px;
+  left: 97px;
+  font-family: Asap, sans-serif;
+}
+
+.table {
+  width: 17.5vw;
+  min-width: 260px;
+  height: 61vh;
+  min-height: 470px;
+  background-color: #0e8e1f;
+  position: absolute;
+  top: 70px;
+  left: 4.5px;
+  align-self: center;
+  margin: 0 auto;
+  border-radius: 10%;
+  border: 8px solid #033009;
+  box-shadow: 0 0 60px #2e383a;
+  transition: .8s;
+  
+}
+
+.BJ-action-btn {
+  width: 4vw;
+  min-width: 50px;
+  height: 6vh;
+  min-height: 15px;
+  color: white;
+  position: relative;
+  top: 405px;
+  display: inline-grid;
+  border: 2px solid silver;
+  border-radius: 10px;
+  text-align: center;
+  font-family: Asap, sans-serif;
+  transition: .2s;
+}
+
+#deal {
+  background-color: #c0d824;
+}
+
+#hit {
+  background-color: #2172a5;
+}
+
+#stop {
+  background-color: #a52161;
+}
+
+#deal:hover {
+  background-color: #565b27;
+  box-shadow: 0 0 40px #e9ff00;
+  transition: .4s;
+  cursor: pointer;
+}
+
+#hit:hover {
+  background-color: #224549;
+  box-shadow: 0 0 40px #00edff;
+  transition: .4s;
+  cursor: pointer;
+}
+
+#stop:hover {
+  background-color: #4f243e;
+  box-shadow: 0 0 40px #ff0098;
+  transition: .4s;
+  cursor: pointer;
+}
+
+.BJ-abtn-font {
+  color: white;
+  position: relative;
+  top: 8px;
+  font-size: 1em;
+}
+
+#middleText {
+  position: relative;
+  top: 150px;
+  margin-left: 3px;
+  margin-right: 3px;
+  font-family: Oswald, sans-serif;
+  transform: scale(1, 1.2);
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.card-dealer {
+  width: 32%;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  visibility: visible;
+}
+
+.card-player {
+  width: 32%;
+  position: absolute;
+  top: 240px;
+  left: 20px;
+  visibility: visible;
+}
+
+.dealer-count {
+  width: 6rem;
+  color: #a3c6ff;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  font-family: Oswald, sans-serif
+}
+
+.player-count {
+  width: 8rem;
+  color: #ffa3cf;
+  position: absolute;
+  top: 360px;
+  left: 10px;
+  font-family: Oswald, sans-serif;
+}
+
+.bet-button {
+  width: 4vw;
+  min-width: 50px;
+  height: 4vh;
+  min-height: 15px;
+  color: white;
+  background-color: black;
+  position: relative;
+  top: 160px;
+  left: 80px;
+  display: flex;
+  border: 2px solid silver;
+  border-radius: 0px;
+  text-align: center;
+  font-family: Asap, sans-serif;
+  transition: .2s;
+}
+
+#tenB:hover {
+  background-color: #637ca5;
+  cursor: pointer;
+  transition: .4s;
+}
+
+#fiftyB:hover {
+  background-color: #637ca5;
+  cursor: pointer;
+  transition: .4s;
+}
+
+#halfB:hover {
+  background-color: #a163a5;
+  cursor: pointer;
+  transition: .4s;
+}
+
+#allin:hover {
+  background-color: #ff0022;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.newGame {
+  width: 6rem;
+  color: white;
+  background-color: #9b0f55;
+  position: absolute;
+  top: 0px;
+  left: 140px;
+  font-family: Oswald, sans-sefif;
+  box-shadow: 0 0 50px #ff5959;
+}
+
+.newGame:hover {
+  background-color: #00ffa1;
+  box-shadow: 0 0 50px #e9ff00;
+  transition: .1s;
+  cursor: pointer;
+}
+
+.balance {
+  width: 7.5rem;
+  color: #21f3ff;
+  position: absolute;
+  top: 9rem;
+  left: 7.5rem;
+  font-family: Oswald, sans-serif;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Google map app section */
+
+
+
+
+#map {
+  height: 500px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  display: none;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Image gallery app section */
+
+
+
+
+.delete-btn {
+  position: absolute;
+  top: 22px;
+  left: 2px;
+  z-index: 10;
+  display: none;
+}
+
+.delete-btn img {
+  width: 120%;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+}
+
+.image-gallery {
+  position: absolute;
+  top: 2.5vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-start: repeat(5, 1fr);
+  justify-items: center;
+  grid-column-gap: 4px;
+  visibility: hidden;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 90px;
+}
+
+.image-grid img:hover {
+  cursor: pointer;
+  filter: brightness(125%);
+}
+
+.main-img {
+}
+
+#default {
+  position: absolute;
+  top: 2.5vh;
+  left: 0px;
+  width: 277px;
+  height: 470px;
+  z-index: 9;
+  visibility: hidden;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* VirtualPhone logo */
+
+
+#logo {
+  color: #9b9b9b;
+  font-size: 1em;
+  font-family: Orbitron, sans-serif;
+  z-index: 3;
+  position: relative;
+  top: 33px;
+  left: 3px;
+}
+
+
+/*-----------------------------------------------------------*/
+/* Red back button */
+
+
+.back-btn {
+  width: 1em;
+  color: red;
+  position: absolute;
+  top: 500px;
+  left: 125px;
+  font-size: 2em;
+  visibility: hidden;
+}
+
+.back-btn:hover {
+  cursor: pointer;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Notepad / Virtual keyboard section */
+
+
+
+
+.notepad {
+  width: 100%;
+  height: 100%;
+  background: #002d2d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.input-keyboard {
+  position: relative;
+  top: 30px;
+}
+
+.caps-on-off {
+  width: 80px;
+  height: 30px;
+  color: #30f1f4;
+  background: #0b2d2d;
+  position: absolute;
+  top: 450px;
+  left: 185px;
+  padding-top: 5px;
+  border: 1px solid #30f1f4;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#caps-on {
+  display: none;
+  z-index: 5;
+}
+
+#caps-off {
+  z-index: 4;
+}
+
+.caps-on-off:active {
+  filter: brightness(150%);
+}
+
+
+.keyBtn-grid {
+  position: absolute;
+  top: 450px;
+  left: 15px;
+  padding-top: 5px;
+  z-index: 2;
+  user-select: none;
+}
+
+.key-grid {
+  width: 50px;
+  height: 25px;
+  color: #30f1f4;
+  background: #0b2d2d;
+  display: inline-grid;
+  grid-gap: 4px;
+  border: 1px solid #30f1f4;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.key-grid:active {
+  filter: brightness(150%);
+}
+
+
+.keyboard-container {
+  width: 17vw;
+  min-width: 270px;
+  height: 27vh;
+  min-height: 220px;
+  background: #10474c;
+  position: absolute;
+  top: 390px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  padding: 5px 0;
+  box-shadow: inset 0px 0px 5px #007b8e;
+  box-shadow: 0px 0px 5px #007b8e;
+  user-select: none;
+  align-self: center;
+  justify-content: center;
+}
+
+.keyboard-keys {
+  text-align: center;
+}
+
+.keyboard-key {
+  width: 8%;
+  height: 35px;
+  margin: 2px;
+  color: #30f1f4;
+  background: #0b2d2d; 
+  position: relative;
+  padding: 3px;
+  border-radius: 4px;
+  border-color: #30f1f4;
+  font-size: 1.05rem;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.keyboard-key:active {
+  filter: brightness(150%);
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* React user evaluation app section */
+
+
+
+
+.main {
+  width: 100%;
+  height: 88%;
+  color: black;
+  background: #ffff80;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
+.form {
+
+}
+
+.form-header {
+  line-height: 1.2rem;
+}
+
+
+
+#reactQ {
+  display: none;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Paint app section */
+
+
+
+
+#paint {
+  width: 100%;
+  height: 88%;
+  background: #b9c1ce;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  display: none;
+}
+
+#canvas {
+  background: white;
+  border-bottom: 1px solid red;
+}
+
+#colorP {
+  position: relative;
+  left: 50px;
+  top: 10px;
+}
+
+.brush-size {
+  width: 50%;
+  height: 30px;
+  position: relative;
+  right: 60px;
+  bottom: 19px;
+  padding-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-column-gap: 4px;
+}
+
+#brush-small {
+  border: 1px solid red;
+}
+
+#brush-small img {
+  width: 60%;
+}
+
+#brush-medium img{
+  width: 75%;
+}
+
+#brush-large img{
+  width: 90%;
+}
+
+#brush-xlarge img{
+  width: 105%;
+}
+
+#brush-small img:hover {
+  width: 75%;
+  cursor: pointer;
+  transition: .3s;
+}
+
+#brush-medium img:hover {
+  width: 90%;
+  cursor: pointer;
+  transition: .3s;
+}
+
+#brush-large img:hover {
+  width: 105%;
+  cursor: pointer;
+  transition: .3s;
+}
+
+#brush-xlarge img:hover {
+  width: 120%;
+  cursor: pointer;
+  transition: .3s;
+}
+
+#draw-new {
+  width: 15%;
+  color: white;
+  background: black;
+  position: relative;
+  bottom: 42px;
+  left: 105px;
+  border: 1px solid black;
+}
+
+#draw-new:hover {
+  background: #003387;
+  cursor: pointer;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Video player app section */
+
+
+
+
+.video-player {
+  width: 100%;
+  height: 95%;
+  background: #070707;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  display: none;
+}
+
+.video-container{
+  width: 100%;
+  height: 100%;
+  background: #070707;
+  position: relative;
+}
+
+.video {
+  width: 100%;
+  position: absolute;
+  right: 0; 
+}
+
+#play {
+  width: 10%;
+  position: relative;
+  top: 490px;
+  left: 20px;
+}
+
+#play:hover {
+  cursor: pointer;
+}
+
+#pause {
+  width: 10%;
+  position: relative;
+  top: 490px;
+  right: 15px;
+  visibility: hidden;
+}
+
+#pause:hover {
+  cursor: pointer;
+}
+
+
+#vid-one {
+  display: none;
+}
+
+#vid-two {
+  display: none;
+}
+
+
+.video-gallery {
+  width: 100%;
+  height: 88%;
+  background: white;
+  position: absolute;
+  top: 20px;
+  font-family: Asap, sans-serif;
+  display: none;
+}
+
+.thumb-gallery {
+  width: 80%;
+  border-bottom: 1px solid black;
+}
+
+#thumb-one {
+  position: relative;
+  top: 5px;
+  right: 25px;
+  margin-bottom: 20px;
+}
+
+#thumb-one img {
+  width: 60%;
+  position: relative;
+  right: 20px;
+  border: 2px solid black;
+}
+
+#thumb-one img:hover {
+  cursor: pointer;
+  border: 2px solid cyan;
+  transition: .2s;
+}
+
+#thumb-two {
+  position: relative;
+  right: 25px;
+}
+
+#thumb-two img {
+  width: 60%;
+  position: relative;
+  right: 7px;
+  border: 2px solid black;
+}
+
+#thumb-two img:hover {
+  cursor: pointer;
+  border: 2px solid cyan;
+  transition: .2s;
+}
+
+
+.backBtn-vid {
+  color: red;
+  width: 1em;
+  position: absolute;
+  top: 510px;
+  left: 240px;
+  font-size: 2em;
+  opacity: .4;
+  display: none;
+}
+
+.backBtn-vid:hover {
+  cursor: pointer;
+}
+
+
+
+.settings-screen {
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: absolute;
+  display: none;
+}
+
+.settings-container {
+  width: 100%;
+  height: 88%;
+  background: #ccf2ff;
+  position: absolute;
+  top: 20px;
+  
+  font-family: Orbitron, sans-serif;
+  font-size: 1rem;
+}
+
+.settings-container div {
+  padding-top: 20px;
+  border-bottom: 1px solid white;
+}
+
+.screen-style-grid:hover {
+  cursor: pointer;
+  color: #4ddbff;
+}
+
+#change-case p:hover {
+  cursor: pointer;
+  color: #4ddbff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#speaker {
+  width: 2rem;
+  height: .3rem;
+  position: absolute;
+  top: .7rem;
+  left: 8.5em;
+  background: #4d4d4d;
+  border: 1px solid black;
+  border-radius: 2rem;
+}
+
+#camera {
+  width: .5rem;
+  height: .5rem;
+  position: absolute;
+  top: .5rem;
+  left: 15rem;
+  background: #1a1a1a;
+  border-radius: 1rem;
+}
+
+.home-bg img {
+  width: 20%;
+}
+
+.home-bg img:hover {
+  cursor: pointer;
+  border: 1px solid #80aaff;
+}

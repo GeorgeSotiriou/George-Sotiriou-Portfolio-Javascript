@@ -1,0 +1,104 @@
+
+:root {
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+
+
+body {
+  background:
+    -webkit-linear-gradient(315deg, hsla(346.26, 95.77%, 44.95%, 1) 0%, hsla(346.26, 95.77%, 44.95%, 0) 70%),
+    -webkit-linear-gradient(65deg, hsla(31.68, 97.5%, 44.94%, 1) 10%, hsla(31.68, 97.5%, 44.94%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(297.05, 97.55%, 40.06%, 1) 15%, hsla(297.05, 97.55%, 40.06%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(220.24, 92.41%, 47.67%, 1) 100%, hsla(220.24, 92.41%, 47.67%, 0) 70%);
+  background:
+    linear-gradient(135deg, hsla(346.26, 95.77%, 44.95%, 1) 0%, hsla(346.26, 95.77%, 44.95%, 0) 70%),
+    linear-gradient(25deg, hsla(31.68, 97.5%, 44.94%, 1) 10%, hsla(31.68, 97.5%, 44.94%, 0) 80%),
+    linear-gradient(315deg, hsla(297.05, 97.55%, 40.06%, 1) 15%, hsla(297.05, 97.55%, 40.06%, 0) 80%),
+    linear-gradient(245deg, hsla(220.24, 92.41%, 47.67%, 1) 100%, hsla(220.24, 92.41%, 47.67%, 0) 70%);
+  margin: 30px 50px;
+  line-height: 1.4;
+}
+
+.btn {
+  background: purple;
+  color: var(--light);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+.btn:hover {
+  background: #6842f4;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+}
+
+
+
+.container {
+  display: grid;
+  grid-gap: 200px 0px;
+  grid-template-areas:
+    'name'
+    'phone'
+    'gallery';
+}
+
+.header-name {
+  color: white;
+  grid-area: name;
+  text-align: center;
+}
+
+.phone {
+  color: white;
+  grid-area: phone;
+  min-height: 500px;
+  background: url(img/phoneC6.png);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.phone-img {
+  grid-area: phone-img;
+  min-height: 200px;
+  padding: 3rem;
+  align-items: start;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.phone-img img {
+  width: 45%;
+}
+
+.gallery {
+  color: white;
+  grid-area: gallery;
+  min-height: 500px;
+  background: url(img/port3.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}

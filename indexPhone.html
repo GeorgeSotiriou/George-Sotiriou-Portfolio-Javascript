@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Georgios Sotiriou Virtual Phone</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+<!-- main div container -->
+
+  <div class="one">
+
+    <div class="phone">
+      
+
+    <!-- screen / parent div for all functionalities -->
+
+  	  <div class="screen">
+
+
+      <!-- top screen collapser -->
+
+        <div class="expand-main">
+          <img id="battery" src="img/battery.png">
+          <img id="signal" src="img/signal.png">
+          <div class="time-top">
+            <span id="hour-top"></span>:<span id="minute-top"></span>
+          </div>
+        </div>
+
+
+      <!-- locked phone / unlock with slider -->
+
+        <div class="slider-screen">
+          <input type="range" min="1" max="100" value="1" class="slider" id="myRange">
+          <p id="slider-text">Slide right to unlock</p>
+        </div>
+
+
+      <!-- home screen -->
+
+        <div class="home-screen">
+          <div class="time">
+            <span id="hour"></span>
+            <span id="minute"></span>
+          </div>
+          <div class="wrapper">
+            <div id="settings">Settings</div>
+            <div id="app-screen">Apps</div>
+          </div>
+        </div>
+
+
+      <!-- app screen --> 
+
+        <div class="app-Mscreen">
+
+          <div class="wrapper-apps">
+            <div class="app-grid" id="first-app">Tools</div>
+            <div class="app-grid" id="second-app">BlackJack 21</div>
+            <div class="app-grid" id="third-app">Google Maps</div>
+            <div class="app-grid" id="fourth-app">Image Gallery</div>
+            <div class="app-grid" id="fifth-app">Notepad</div>
+            <div class="app-grid" id="sixth-app">User Feedback</div>
+            <div class="app-grid" id="seventh-app">Paint</div>
+            <div class="app-grid" id="eighth-app">Video Player</div>
+          </div>  
+
+        </div>
+
+
+      <!-- first (app) tools -->
+
+        <div class="tools">
+          <div class="tool-items">
+            <div class="tool-grid"><img id="revBtn" src="img/reverse.png"><p>Reverse Text</p></div>
+            <div class="tool-grid"><img id="tempBtn" src="img/temp.png"><p>Temperature converter</p></div>
+            <div class="tool-grid"><img id="currBtn" src="img/currency.png"><p>Currency converter</p></div>
+          </div>
+        </div>
+         
+        <div class="temperature">
+          <div class="temp-converter">
+            <div class="temp-grid"><input id="celcius" type="number" placeholder="enter celcius -"></div>
+            <div class="temp-grid"><input id="fahr" type="number" placeholder="enter fahrenheit -"></div>
+            <div class="temp-grid"><input id="kelvin" type="number" placeholder="enter kelvin -"></div>
+          </div>
+        </div>
+
+        <div class="reverse">
+          <div class="reverse-tool">
+            <div class="revString"><input id="insert-string" type="text" placeholder="Enter your text..."></div> 
+            <div class="revString"><input id="reversed-string" type="text" placeholder="Reversed text:"></div>
+          </div>
+        </div>
+
+        <div class="currency">
+          <div class="currency-converter">
+            <div class="curr-grid"><img src="img/usd.png"><input id="usd" type="number" placeholder="enter amount.."></div>
+            <div class="curr-grid"><img src="img/pound.png"><input id="pound" type="number" placeholder="enter amount.."></div>
+            <div class="curr-grid"><img src="img/euro.png"><input id="euro" type="number" placeholder="enter amount.."></div>
+            <div class="curr-grid"><img src="img/kwon.png"><input id="kwon" type="number" placeholder="enter amount.."></div>
+            <div class="curr-grid"><img src="img/jyen.png"><input id="jyen" type="number" placeholder="enter amount.."></div>
+          </div>
+        </div>
+
+        <div class="backBtn-tools">
+          <i class="fas fa-angle-left"></i>
+        </div>
+
+
+
+      <!-- blackjack app -->
+
+        <div class="blackjack-app">
+
+        <div class="result"><p>Select your bet and click 'Deal' to begin the game!</p></div>
+        <div class="table">
+          <div class="BJ-action-btn" id="deal"><p class="BJ-abtn-font">DEAL</p></div>
+          <div class="BJ-action-btn" id="hit"><p class="BJ-abtn-font">HIT ME!</p></div>
+          <div class="BJ-action-btn" id="stop"><p class="BJ-abtn-font">STOP</p></div>
+          <p id="middleText">DEALER MUST HIT AT 16 AND STOP AT 17</p>
+          <img class="card-dealer" src="" alt="">
+          <img class="card-player" src="" alt="">
+          <div class="dealer-count"><p>Dealer count:</p></div>
+          <div class="player-count"><p>Player count:</p></div>
+          <div class="bet-button" id="tenB"><p>10$</p></div>
+          <div class="bet-button" id="fiftyB"><p>50$</p></div>
+          <div class="bet-button" id="halfB"><p>200$</p></div>
+          <div class="bet-button" id="allin"><p>500$</p></div>
+          <div class="balance">Player chips:1000</div>
+          <div id="border"></div>
+          <div class="newGame">New game</div>
+        </div>
+      
+        </div>
+
+
+        <!-- google maps app -->
+
+        <div id="map"></div>
+  
+
+        <!-- image-gallery app -->
+
+        <div class="delete-btn">
+          <img src="img/delete.png">
+        </div>
+        
+        <div class="main-img">
+          <img src="img/01.jpg" id="default">
+        </div>
+
+        <div class="image-gallery">
+          <div class="image-grid"><img src="img/01.jpg"></div>
+          <div class="image-grid"><img src="img/02.jpg"></div>
+          <div class="image-grid"><img src="img/03.jpg"></div>
+          <div class="image-grid"><img src="img/04.jpg"></div>
+          <div class="image-grid"><img src="img/05.jpg"></div>
+          <div class="image-grid"><img src="img/06.jpg"></div>
+          <div class="image-grid"><img src="img/07.jpg"></div>
+          <div class="image-grid"><img src="img/08.jpg"></div>
+          <div class="image-grid"><img src="img/09.jpg"></div>
+          <div class="image-grid"><img src="img/10.jpg"></div>
+          <div class="image-grid"><img src="img/11.jpg"></div>
+          <div class="image-grid"><img src="img/12.jpg"></div>
+          <div class="image-grid"><img src="img/13.jpg"></div>
+          <div class="image-grid"><img src="img/14.jpg"></div>
+          <div class="image-grid"><img src="img/15.jpg"></div>
+          <div class="image-grid"><img src="img/16.jpg"></div>
+          <div class="image-grid"><img src="img/17.jpg"></div>
+          <div class="image-grid"><img src="img/18.jpg"></div>
+          <div class="image-grid"><img src="img/19.jpg"></div>
+          <div class="image-grid"><img src="img/20.jpg"></div>
+        </div>
+
+        
+        <!-- notepad app & virtual keyboard -->
+
+        <div class="notepad">
+
+          <textarea class="input-keyboard" rows="15" cols="35"></textarea>
+          <div class="caps-on-off" id="caps-on">CAPS ON</div>
+          <div class="caps-on-off" id="caps-off">CAPS OFF</div>
+          <div class="keyBtn-grid">
+            <div class="key-grid" id="space">space</div>
+            <div class="key-grid" id="enter">enter</div>
+            <div class="key-grid" id="backspace"> ← </div>
+          </div>
+          
+        </div>
+
+
+        <!-- user evaluation app (in react) -->
+
+        <div id="reactQ"></div>
+        
+
+        <!-- paint app -->
+
+        <div id="paint">
+          <canvas id="canvas" width="275" height="425"></canvas>
+          <input type="color" id="colorP">
+          <div class="brush-size">
+            <div id="brush-small"><img src="img/brush.png"></div>
+            <div id="brush-medium"><img src="img/brush.png"></div>
+            <div id="brush-large"><img src="img/brush.png"></div>
+            <div id="brush-xlarge"><img src="img/brush.png"></div>
+          </div>
+         
+        </div>
+        
+ 
+        <!-- video player app -->
+
+        <div class="video-player">
+          <div class="video-container">
+            <video class="video" id="vid-one" src="vids/vid.mp4"></video>
+            <video class="video" id="vid-two" src="vids/vid2.mp4"></video>
+            <img id="play" src="img/play2.png">
+            <img id="pause" src="img/pause2.png">
+          </div>
+        </div>
+
+        <div class="video-gallery">
+          <div class="thumb-gallery" id="thumb-one"><img src="img/thumbnail11.png">Fish</div>
+          <div class="thumb-gallery" id="thumb-two"><img src="img/thumbnail22.png">FireSky</div>
+        </div>
+
+        <div class="backBtn-vid">
+          <i class="fas fa-angle-left"></i>
+        </div>
+        
+
+       <!-- settings screen -->
+
+        <div class="settings-screen">
+          <div class="settings-container">
+            <div id="change-case">Choose case color: <input type="color" id="colorCase"><p>Apply selected color<p></div>
+            <div id="change-app-screen">App screen style: 
+              <div class="screen-style-grid" id="style-one">Default</div>
+              <div class="screen-style-grid" id="style-two">Chess</div>
+              <div class="screen-style-grid" id="style-three">Metal</div>
+            </div>
+            <div class="home-bg">Choose home screen background:  
+              <br>
+              <img id="imbg" src="img/10.jpg">
+              <img id="imbg-t" src="img/13.jpg">
+              <img id="imbg-th" src="img/20.jpg">
+              <img id="imbg-f" src="img/18.jpg">
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <!-- back button and phone logo -->
+
+        <div class="back-btn">
+          <i class="fas fa-angle-left"></i>
+        </div>
+
+      </div>
+  	  <p id="logo">VirtualPhone</p>
+
+      <!-- speaker and camera decorations above the screen -->
+      
+      <div id="speaker"></div>
+      <div id="camera"></div>
+
+    </div>
+
+
+  </div>
+
+
+  <script src="app.js" charset="utf-8"></script>
+  <script src="blackjack.js" charset="utf-8"></script>
+  <script src="clock.js" charset="utf-8"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVR5WORCneZRJU4AsaoncLvgIF9ogWDBw&callback=initMap"></script>
+  <script src="notepad.js" charset="utf-8"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  <script type="text/babel" src="reactQ.js"></script>
+  <script src="paint.js" charset="utf-8"></script>
+  <script src="videoPlayer.js" charset="utf-8"></script>
+  <script src="tools.js" charset="utf-8"></script>
+  <script src="settings.js" charset="utf-8"></script>
+</body>
+</html>
