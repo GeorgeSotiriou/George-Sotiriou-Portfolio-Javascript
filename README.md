@@ -1,1 +1,1 @@
-# VirtualPhone-GS
+# George Sotiriou Portfolio - Javascript
