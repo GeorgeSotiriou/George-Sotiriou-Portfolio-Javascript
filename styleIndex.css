@@ -1,11 +1,4 @@
 
-:root {
-  --light: #fff;
-  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-}
-
-
-
 body {
   background:
     -webkit-linear-gradient(315deg, hsla(346.26, 95.77%, 44.95%, 1) 0%, hsla(346.26, 95.77%, 44.95%, 0) 70%),
@@ -22,16 +15,16 @@ body {
 }
 
 .btn {
+  color: #fff;
   background: purple;
-  color: var(--light);
   padding: 0.6rem 1.3rem;
   text-decoration: none;
   border: 0;
 }
 
 .btn:hover {
-  background: #6842f4;
   color: white;
+  background: #6842f4;
 }
 
 img {
@@ -42,8 +35,6 @@ img {
   display: grid;
   grid-gap: 20px;
 }
-
-
 
 .container {
   display: grid;
@@ -72,20 +63,7 @@ img {
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  box-shadow: var(--shadow);
-}
-
-.phone-img {
-  grid-area: phone-img;
-  min-height: 200px;
-  padding: 3rem;
-  align-items: start;
-  justify-content: center;
-  box-shadow: var(--shadow);
-}
-
-.phone-img img {
-  width: 45%;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, .9);
 }
 
 .gallery {
@@ -100,5 +78,5 @@ img {
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  box-shadow: var(--shadow);
+  box-shadow: 0 1px 5px #686868;
 }
