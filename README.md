@@ -4,9 +4,9 @@ Relational components in the project:
 index.html == styleIndex.css
 
 2) phone app:
-indexPhone.html == style.css, 
-indexPhone.html == app.js, 
-indexPhone.html ==  blackjack.js, 
+indexPhone.html == style.css <br/> 
+indexPhone.html == app.js <br/>
+indexPhone.html ==  blackjack.js <br/>
 indexPhone.html ==  clock.js,
 indexPhone.html ==  notepad.js,
 indexPhone.html ==  paint.js,
