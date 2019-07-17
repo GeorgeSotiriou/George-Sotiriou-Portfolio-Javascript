@@ -3,7 +3,7 @@ Relational components in the project:
 1. home page: <br/>
 index.html == styleIndex.css
 
-2. phone app:
+2. phone app: <br/>
 indexPhone.html == style.css <br/> 
 indexPhone.html == app.js <br/>
 indexPhone.html ==  blackjack.js <br/>
