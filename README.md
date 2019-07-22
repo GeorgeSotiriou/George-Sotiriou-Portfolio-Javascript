@@ -18,4 +18,4 @@ indexPhone.html ==  videoPlayer.js
 3. photo-gallery: <br/>
 indexPhotoGrid.html == photoStyle.css <br/>
 indexPhoto.html == photoStyle.css <br/>
-indexPhoto.html == photoApp.css
+indexPhoto.html == photoApp.js
